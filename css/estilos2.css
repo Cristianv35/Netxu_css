@@ -1,0 +1,141 @@
+body {
+	font-family: Dancing Script;
+	background-color: #02010a;
+	margin-top: 3px;
+}
+.container {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.container div {
+	box-sizing: border-box;
+	min-width: 150px;
+	margin: 0;
+}
+p{
+	text-align: left;
+}
+.c1, .c2 {
+	background-color: #5b7989;
+	padding: 10px;
+	color: white;
+}
+.c1{
+	text-shadow: 2px 2px #02010a;
+}
+.c2 {
+	font-size: 1.4em;
+	padding: 30px;
+}
+.c3, .c4, .c5, .c6, .c7, .c8 {
+	background-color: #d5c75f;
+	text-align: center;
+	padding: 25px;
+	border: 1px;
+}
+.c9, .c10, .c11, .c12 {
+	background-color: #C6d5c5;
+	text-align: center;
+	padding: 25px;
+}
+.container {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+.img-adaptativa{
+	width: 95%;
+}
+.active {
+	text-decoration: none;
+}
+.c2 a:link, .c2 a:active, .c2 a:hover, .c2 a:visited {
+	color: white;
+}
+#foto1{
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+}
+#foto2, #foto4, #foto6 {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%)
+}
+#foto3 {
+	-webkit-filter: sepia(90%);
+	filter: sepia(90%)
+}
+
+/* móviles */
+@media (max-width:899px) {
+	.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12 {
+		width: 100%;
+	}
+	.c1, .c2{
+		text-align: center;
+	}
+	.container{
+		width: 100%;
+	}
+	.c1{
+		border-radius: 10px 10px 0 0;
+	}
+	.c12{
+		border-radius: 0 0 10px 10px;
+	}
+}
+/* desktop */
+@media (min-width: 900px) {
+	.c1, .c2 {
+		width: 50%;
+	}
+	.c3, .c4, .c5 {
+		width: 33.3%;
+	}
+	.c6, .c7, .c8 {
+		width: 33.3%;
+	}
+	.c9, .c10, .c11, .c12 {
+		width: 25%;
+	}
+	.c2 {
+		text-align: right;
+	}
+	.container {
+		max-width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.c1{
+		border-radius: 10px 0 0 0;
+	}
+	.c2{
+		border-radius: 0 10px 0 0;
+	}
+	.c9{
+		border-radius: 0 0 0 10px;
+	}
+	.c12{
+		border-radius: 0 0 10px 0;
+	}
+}
+@keyframes container-animacion {
+	0% {
+		margin-top: 150%;
+	}
+	60% {
+		margin-top: -5%;
+	}
+	100% {
+		margin-top: 0%;
+	}
+}
+.container {
+	animation-name: container-animacion;
+	animation-duration: 0.7s;
+	-webkit-animation-delay: 0s;
+	-moz-animation-delay: 0s;
+	-o-animation-delay: 0s;
+	animation-delay: 0s;
+}
